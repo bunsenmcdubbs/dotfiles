@@ -322,12 +322,24 @@ you should place your code here."
     :ensure t
     :config
     (editorconfig-mode 1))
-  (global-set-key (kbd "s-t") 'helm-imenu)
 
-  (spacemacs/set-leader-keys "s-/" 'comment-or-uncomment-region)
+  (global-set-key (kbd "s-t") 'helm-imenu)
 
   ;; for HackGT's typescript projects
   (add-hook 'typescript-mode-hook (lambda () (setq indent-tabs-mode t)))
+
+  ;; go to start / end of a line with H / L
+  (define-key evil-normal-state-map (kbd "H") 'beginning-of-line-text)
+  (define-key evil-normal-state-map (kbd "L") 'end-of-line)
+  (define-key evil-visual-state-map (kbd "H") 'beginning-of-line-text)
+  (define-key evil-visual-state-map (kbd "L") 'end-of-line)
+
+  ;; go up and down by visual lines
+  (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+  (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
+  ;; comment / un-comment lines
+  (define-key evil-normal-state-map (kbd "s-/") 'spacemacs/comment-or-uncomment-lines)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

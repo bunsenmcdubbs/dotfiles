@@ -53,3 +53,4 @@ the script tries to create a symlink.
 ### `spacemacs.symlink`
 - [ ] configure orgmode directories (orgmode capture template destinations)
 with environment variables
+- [ ] remove last section where emacs autogenerates settings etc.

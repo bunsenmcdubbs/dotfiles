@@ -26,9 +26,9 @@ $EDITOR <dotfile-that-needs-editing>.symlink
 ./script/sync.sh
 ```
 
-The (very very short) script takes files in this directory[^1] with file
-extention `.symlink` and creates a corresponding symlink in the `$HOME`
-directory without the `.symlink` extention and prepended with `.`.
+The (very short) script takes files in this directory[^1] with file
+extension `.symlink` and creates a corresponding symlink in the `$HOME`
+directory without the `.symlink` extension and prepended with `.`.
 
 Example: The file `dotfiles/spacemacs.symlink` will trigger the creation of
 a symlink at `$HOME/.spacemacs` that links back to the file
@@ -48,9 +48,9 @@ Currently any dotfiles in subdirectories will likely trigger an error when
 the script tries to create a symlink.
 - [ ] add flags to overwrite files (bonus points for individual file interactivity)
 - [ ] create a new branch (or repo?) with only the script and manage the content
-(actual dotfiles) seperately
+(actual dotfiles) separately
 
 ### `spacemacs.symlink`
 - [ ] configure orgmode directories (orgmode capture template destinations)
 with environment variables
-- [ ] remove last section where emacs autogenerates settings etc.
+- [ ] remove last section where emacs auto-generates settings etc.

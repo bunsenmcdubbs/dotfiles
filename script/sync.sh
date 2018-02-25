@@ -32,7 +32,7 @@ log_err() {
 set -eu
 
 symlink_ext=".symlink"
-files=$(find . -type f -iname "*$symlink_ext")
+files=$(find . \( -type f -o -type l \) -iname "*$symlink_ext")
 
 failed_links=
 success_links=
